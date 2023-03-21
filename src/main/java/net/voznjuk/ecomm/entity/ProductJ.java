@@ -37,4 +37,8 @@ public class ProductJ {
     @Column(name="last_updated")
     @UpdateTimestamp
     private Date lastUpdated;
+
+    @ManyToOne
+    @JoinColumn(name="category_id")
+    private ProductCatJ category;
 }
